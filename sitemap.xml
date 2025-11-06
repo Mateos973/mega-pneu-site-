@@ -3,32 +3,32 @@
     
     <!-- Page d'accueil -->
     <url>
-        <loc>https://www.megapneu.gf/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>https://megapneu-guyane.fr/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <!-- Page Services -->
     <url>
-        <loc>https://www.megapneu.gf/services.html</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>https://megapneu-guyane.fr/services.html</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Page À Propos -->
     <url>
-        <loc>https://www.megapneu.gf/a-propos.html</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>https://megapneu-guyane.fr/a-propos.html</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <!-- Page Contact/Devis -->
     <url>
-        <loc>https://www.megapneu.gf/landing-page-contact-devis.html</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>https://megapneu-guyane.fr/landing-page-contact-devis.html</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
