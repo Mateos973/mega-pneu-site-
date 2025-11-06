@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis - MEGA PNEU Guyane</title>
+    <link rel="icon" type="image/png" href="logo-mega-pneu.png">
+    <link rel="apple-touch-icon" href="logo-mega-pneu.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo-mega-pneu.png" alt="Logo MEGA PNEU - Robot jaune avec M bleu"> 
+                MEGA PNEU
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="a-propos.html">À Propos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="landing-page-contact-devis.html">Contact/Devis</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Contact -->
+    <section class="hero py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4 hero-main-text">Contactez Votre Expert Pneus</h1>
+            <p class="lead mb-4">Besoin d'un devis, d'une urgence ou de conseils ? Nous sommes là pour vous accompagner !</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <a href="tel:+594694446422" class="btn btn-warning btn-lg mb-2"><i class="fas fa-phone"></i> +594 694 44 64 22</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formulaire de Contact/Devis -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="https://formspree.io/f/xdkpqwod" method="POST" class="bg-white p-4 rounded shadow">
+                        <h4 class="fw-bold mb-4 text-center" style="color: var(--blue);">Demande de Devis ou Contact</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" name="email" class="form-control" placeholder="Votre Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="tel" name="telephone" class="form-control" placeholder="Votre Téléphone">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select name="type_demande" class="form-select">
+                                    <option value="">Type de demande</option>
+                                    <option value="devis">Demande de devis</option>
+                                    <option value="urgence">Urgence pneu</option>
+                                    <option value="reparation">Réparation</option>
+                                    <option value="conseil">Conseil/Information</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" rows="4" placeholder="Votre Message (décrivez votre besoin, type de véhicule, urgence...)" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning fw-bold px-4">Envoyer ma demande</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Localisation et Contact - Avec Carte Leaflet Corrigée -->
+    <section class="py-3" style="background-color: var(--gray);">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--dark-blue);">Nous Trouver à Rémire-Montjoly</h2>
+            <div class="row">
+                <!-- Infos Contact (Gauche) -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marker-alt fa-3x" style="color: var(--yellow);"></i>
+                            <h5 class="card-title">Adresse</h5>
+                            <p class="card-text">
+                                1120 Route de Montjoly<br>
+                                97354 Rémire-Montjoly<br>
+                                Guyane Française
+                            </p>
+                            <i class="fas fa-phone fa-2x" style="color: var(--yellow);"></i>
+                            <p><a href="tel:+594694446422" class="text-decoration-none" style="color: var(--blue); font-weight: bold;">+594 694 44 64 22</a></p>
+                            <i class="fas fa-envelope fa-2x" style="color: var(--yellow);"></i>
+                            <p><a href="mailto:megapneu-1@outlook.fr" class="text-decoration-none" style="color: var(--blue);">megapneu-1@outlook.fr</a></p>
+                            <i class="fas fa-clock fa-2x" style="color: var(--yellow);"></i>
+                            <p>Du lundi au Samedi<br>8h - 19h</p>
+                            <a href="tel:+594694446422" class="btn btn-primary btn-lg">Appeler Maintenant</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte Leaflet (Droite) - Coordonnées Corrigées US Car Import -->
+                <div class="col-md-8 mb-4">
+                    <div id="map" style="height: 480px; border: 3px solid var(--yellow); border-radius: 8px;"></div>
+                    <p class="text-center mt-2 small text-muted">Carte interactive via Leaflet | © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services Rapides -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--dark-blue);">Nos Services d'Urgence</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center border-0 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-phone-alt fa-3x" style="color: var(--yellow);"></i>
+                            <h5 class="fw-bold">Intervention Rapide</h5>
+                            <p>Appel d'urgence 7j/7 pour dépannage sur site en Guyane.</p>
+                            <a href="tel:+594694446422" class="btn btn-warning">Appeler maintenant</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center border-0 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-clock fa-3x" style="color: var(--yellow);"></i>
+                            <h5 class="fw-bold">Devis en 24h</h5>
+                            <p>Réponse rapide à votre demande de devis par email ou téléphone.</p>
+                            <a href="#contact" class="btn btn-warning">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center border-0 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-map-marker-alt fa-3x" style="color: var(--yellow);"></i>
+                            <h5 class="fw-bold">À votre Service</h5>
+                            <p>Atelier sur Rémire-Montjoly et intervention mobile en Guyane.</p>
+                            <a href="mailto:megapneu-1@outlook.fr" class="btn btn-warning">Nous écrire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-5" style="background-color: var(--yellow); color: var(--black);">
+        <div class="container text-center">
+            <h2>Une question ? Un devis ? Une urgence ?</h2>
+            <p>MEGA PNEU vous répond rapidement pour tous vos besoins pneus en Guyane.</p>
+            <a href="tel:+594694446422" class="btn btn-info btn-lg me-3">+594 694 44 64 22</a>
+            <a href="mailto:megapneu-1@outlook.fr" class="btn btn-info btn-lg">Envoyer un email</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">MEGA PNEU - Route de Rémire-Montjoly, 97354 Rémire-Montjoly<br>
+            <a href="mailto:megapneu-1@outlook.fr" class="text-white">megapneu-1@outlook.fr</a> | 
+            <a href="tel:+594694446422" class="text-white">+594 694 44 64 22</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Scripts Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        // Initialisation Carte Leaflet - Coordonnées Exactes US Car Import
+        var map = L.map('map').setView([4.91985, -52.27861], 15); // Lat 4.91985, Lng -52.27861 (1120 Route de Montjoly)
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        // Marqueur avec Popup (Adresse Précise)
+        var marker = L.marker([4.91985, -52.27861]).addTo(map);
+        marker.bindPopup(`
+            <b>MEGA PNEU</b><br>
+            1120 Route de Montjoly<br>
+            97354 Rémire-Montjoly, Guyane<br>
+            <a href="tel:+594694446422">+594 694 44 64 22</a><br>
+            <a href="mailto:megapneu-1@outlook.fr">megapneu-1@outlook.fr</a><br>
+            Ouvert : Du lundi au Samedi 8h-19h
+        `).openPopup();
+    </script>
+    
+    <!-- Script pour smooth scroll vers formulaire -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
