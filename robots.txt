@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.megapneu.gf/sitemap.xml
+Sitemap: https://megapneu-guyane.fr/sitemap.xml
 
 # Disallow non-essential directories
 Disallow: /css/
