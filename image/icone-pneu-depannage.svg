@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Pneu avec sculpure -->
+  <circle cx="300" cy="300" r="250" fill="#000000"/>
+  <circle cx="300" cy="300" r="150" fill="#FFFFFF"/>
+  <circle cx="300" cy="300" r="80" fill="#000000"/>
+  
+  <!-- Sculpure du pneu (motif chevrons) -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <!-- Chevrons gauche -->
+    <path d="M100 200 L150 180 L130 220 L80 240 Z"/>
+    <path d="M110 240 L160 220 L140 260 L90 280 Z"/>
+    <path d="M120 280 L170 260 L150 300 L100 320 Z"/>
+    <path d="M130 320 L180 300 L160 340 L110 360 Z"/>
+    <path d="M140 360 L190 340 L170 380 L120 400 Z"/>
+    
+    <!-- Chevrons droite -->
+    <path d="M500 200 L450 180 L470 220 L520 240 Z"/>
+    <path d="M490 240 L440 220 L460 260 L510 280 Z"/>
+    <path d="M480 280 L430 260 L450 300 L500 320 Z"/>
+    <path d="M470 320 L420 300 L440 340 L490 360 Z"/>
+    <path d="M460 360 L410 340 L430 380 L480 400 Z"/>
+    
+    <!-- Chevrons haut -->
+    <path d="M200 100 L180 150 L220 130 L240 80 Z"/>
+    <path d="M240 110 L220 160 L260 140 L280 90 Z"/>
+    <path d="M280 120 L260 170 L300 150 L320 100 Z"/>
+    <path d="M320 130 L300 180 L340 160 L360 110 Z"/>
+    <path d="M360 140 L340 190 L380 170 L400 120 Z"/>
+    
+    <!-- Chevrons bas -->
+    <path d="M200 500 L180 450 L220 470 L240 520 Z"/>
+    <path d="M240 490 L220 440 L260 460 L280 510 Z"/>
+    <path d="M280 480 L260 430 L300 450 L320 500 Z"/>
+    <path d="M320 470 L300 420 L340 440 L360 490 Z"/>
+    <path d="M360 460 L340 410 L380 430 L400 480 Z"/>
+  </g>
+  
+  <!-- Outil de démontage -->
+  <g transform="translate(480, 250)">
+    <!-- Manche -->
+    <rect x="0" y="0" width="120" height="20" rx="10" fill="#000000"/>
+    <circle cx="130" cy="10" r="15" fill="#000000"/>
+    
+    <!-- Partie métallique -->
+    <path d="M-20 5 L0 0 L0 20 L-20 15 Z" fill="#666666"/>
+    <circle cx="-25" cy="10" r="8" fill="#666666"/>
+  </g>
+</svg>
